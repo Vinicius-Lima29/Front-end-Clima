@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Aplicação Clima</h1>
+
+    <form>
+        <input type="text" name="cityName" placeholder="Coloque o nome da cidade" [(ngModel)]="city">
+        <button type="button" (click)="getWeather()">Buscar</button>
+    </form>
+
+    <div *ngIf="weatherData">
+        <h2>{{ weatherData.name }}</h2>
+        <i class="fas fa-sun"></i> <!-- Corrigido o nome da classe do ícone -->
+        <div>
+            <fa-icon [icon]="['fas', 'cloud-sun-rain']"></fa-icon> <!-- Corrigido o uso do componente fa-icon -->
+        </div>
+        <p>Temperatura: {{weatherData.main.temp}}</p>
+        <p>Humidade: {{weatherData.main.humidity}}</p>
+        <p>Clima: {{weatherData.weather[0].description}}</p>
+    </div>
+</div>

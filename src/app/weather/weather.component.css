@@ -1,0 +1,12 @@
+.container{
+    display: block;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    color: white;
+    background: rgb(48, 9, 85);
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
